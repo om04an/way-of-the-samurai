@@ -1,2 +1,2 @@
 # way-of-the-samurai
-Way of the Samurai
+Passing the course, the way of the samurai
