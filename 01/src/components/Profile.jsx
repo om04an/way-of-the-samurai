@@ -1,6 +1,8 @@
+import s from './Profile.module.css';
+
 const Profile = () => {
     return (
-        <div className='content'>
+        <div className={s.content}>
             <div>
                 <img src='https://wallpaperaccess.com/full/328218.jpg' alt='los-angelea' />
             </div>
@@ -12,10 +14,10 @@ const Profile = () => {
                 <div>
                     new post
                 </div>
-                <div>
+                <div className={s.item}>
                     post 1
                 </div>
-                <div>
+                <div className={s.item}>
                     post 2
                 </div>
             </div>
