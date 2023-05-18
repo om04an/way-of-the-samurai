@@ -2,20 +2,14 @@
     grid-area: n;
     background-color: #363636;
     padding: 25px;
-}
-
-.item a {
-    color: #B5B5B5;
     font-size: 20px;
     line-height: 28px;
-    transition: 0.2s;
 }
 
-.item a:hover {
-    font-size: 22px;
-    transition: 0.2s;
+.item {
+    color: #B5B5B5;
 }
 
-.active a {
-    color: #7F95B5;
+.active {
+    color: #7f95b5;
 }
