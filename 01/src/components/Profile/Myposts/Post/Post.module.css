@@ -1,5 +1,9 @@
 .item {
-    color: greenyellow;
+    color: rgb(247, 247, 247);
+}
+
+.item + .item {
+    margin-top: 10px;
 }
 
 .item img {

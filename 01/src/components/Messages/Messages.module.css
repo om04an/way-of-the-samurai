@@ -11,10 +11,22 @@
     color: rgb(255, 255, 255);
 }
 
+.dialog + .dialog {
+    margin-top: 10px;
+}
+
 .active {
     color: darkorange;
 }
 
 .chat {
     padding: 10px;
+}
+
+.message {
+    color: rgb(209, 209, 209);
+}
+
+.message + .message {
+    margin-top: 10px;
 }

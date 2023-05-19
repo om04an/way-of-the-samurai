@@ -11,7 +11,7 @@ const Dialog = (props) => {
 
 const Message = (props) => {
     return (
-        <div className="message">{props.text}</div>
+        <div className={s.message}>{props.text}</div>
     )
 }
 
@@ -29,15 +29,21 @@ const Messages = () => {
         { id: 2, text: 'World!' }
     ]
 
+    let dialogs = dialogsData.map((el) => {
+        return <Dialog username={el.username} id={el.id} />
+    })
+
+    let messages = messagesData.map((el) => {
+        return <Message text={el.text} />
+    })
+
     return (
         <div className={s.messages}>
             <div className={s.dialogs}>
-                <Dialog username={dialogsData[0].username} id={dialogsData[0].id} />
-                <Dialog username={dialogsData[1].username} id={dialogsData[1].id} />
+                {dialogs}
             </div>
             <div className={s.chat}>
-                <Message text={messagesData[0].text} />
-                <Message text={messagesData[1].text} />
+                {messages}
             </div>
         </div>
     )
