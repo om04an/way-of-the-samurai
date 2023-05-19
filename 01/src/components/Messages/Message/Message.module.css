@@ -1,0 +1,7 @@
+.message {
+    color: rgb(209, 209, 209);
+}
+
+.message + .message {
+    margin-top: 10px;
+}

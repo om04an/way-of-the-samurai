@@ -1,33 +1,13 @@
-import { NavLink } from 'react-router-dom'
 import s from './Messages.module.css'
+import Message from './Message/Message'
+import Dialog from './Dialog/Dialog'
 
-const Dialog = (props) => {
-    return (
-        <div className={s.dialog}>
-            <NavLink to={props.id}>{props.username}</NavLink>
-        </div>
-    )
-}
 
-const Message = (props) => {
-    return (
-        <div className={s.message}>{props.text}</div>
-    )
-}
+const Messages = (props) => {
 
-const Messages = () => {
+    let dialogsData = props.dialogsData
 
-    let dialogsData = [
-        { id: '1', username: 'User 1' },
-        { id: '2', username: 'User 2' },
-        { id: '3', username: 'User 3' },
-        { id: '4', username: 'User 4' }
-    ]
-
-    let messagesData = [
-        { id: 1, text: 'Hello' },
-        { id: 2, text: 'World!' }
-    ]
+    let messagesData = props.messagesData
 
     let dialogs = dialogsData.map((el) => {
         return <Dialog username={el.username} id={el.id} />

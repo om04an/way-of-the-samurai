@@ -1,0 +1,7 @@
+.dialog a{
+    color: rgb(255, 255, 255);
+}
+
+.dialog + .dialog {
+    margin-top: 10px;
+}
