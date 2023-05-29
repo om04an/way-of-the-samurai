@@ -4,16 +4,12 @@ import Dialog from './Dialog/Dialog'
 
 
 const Messages = (props) => {
-
-    let dialogsData = props.dialogsData
-
-    let messagesData = props.messagesData
-
-    let dialogs = dialogsData.map((el) => {
+    
+    let dialogs = props.state.dialogsData.map((el) => {
         return <Dialog username={el.username} id={el.id} />
     })
 
-    let messages = messagesData.map((el) => {
+    let messages = props.state.messagesData.map((el) => {
         return <Message text={el.text} />
     })
 

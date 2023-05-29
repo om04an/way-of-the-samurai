@@ -3,9 +3,7 @@ import Post from './Post/Post';
 
 const Myposts = (props) => {
 
-    let postsData = props.postsData
-
-    let posts = postsData.map((el) => {
+    let posts = props.postsData.map((el) => {
         return <Post text={el.text} like={el.likes} />
     })
 
