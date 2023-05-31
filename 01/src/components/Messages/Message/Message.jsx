@@ -1,5 +1,7 @@
+// Импорт
 import s from './Message.module.css'
 
+// Компонента
 const Message = (props) => {
 
     return (
@@ -7,4 +9,5 @@ const Message = (props) => {
     )
 }
 
+// Экспорт
 export default Message

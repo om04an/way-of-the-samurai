@@ -1,5 +1,7 @@
+// Импорт
 import s from './Header.module.css';
 
+// Компонента
 const Header = () => {
     return (
         <header className={s.header}>
@@ -8,4 +10,5 @@ const Header = () => {
     )
 }
 
+// Экспорт
 export default Header;
