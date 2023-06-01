@@ -6,6 +6,7 @@ let state = {
             { id: 1, text: 'Hello', likes: '34' },
             { id: 2, text: 'World!', likes: '61' },
         ],
+        newPostText: '',
     },
     messagesPage: {
         dialogsData: [
@@ -18,16 +19,44 @@ let state = {
             { id: 1, text: 'Hello' },
             { id: 2, text: 'World!' },
         ],
+        newMessageText: 'New text message',
     },
 }
-export let addPost = (postMessage) => {
+
+// Функция для добавления нового поста
+export let addPost = () => {
     let newPost = {
         id: 3,
-        text: postMessage,
+        text: state.profilePage.newPostText,
         likes: 0,
     }
 
     state.profilePage.postsData.push(newPost)
+    state.profilePage.newPostText = ''
+    rerenderEntireTree(state)
+}
+
+// Функция для добавления нового сообщения
+export let addMessage = () => {
+    let newMessage = {
+        id: 3,
+        text: state.messagesPage.newMessageText,
+    }
+
+    state.messagesPage.messagesData.push(newMessage)
+    state.messagesPage.newMessageText = ''
+    rerenderEntireTree(state)
+}
+
+// Функция для изменения текста в textarea в myposts
+export let updateNewPostText = (newText) => {
+    state.profilePage.newPostText = newText
+    rerenderEntireTree(state)
+}
+
+// Функция для изменения текста в textarea в messages
+export let updateNewMessageText = (newText) => {
+    state.messagesPage.newMessageText = newText
     rerenderEntireTree(state)
 }
 

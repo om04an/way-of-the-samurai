@@ -8,23 +8,29 @@ const Myposts = (props) => {
         return <Post text={el.text} like={el.likes} />
     })
 
+    // Создание ссылки на элемент
     let newPostElement = React.createRef()
 
+    // Вызывается при клике на кнопку с помощью onClick
     let addPost = () => {
-        let text = newPostElement.current.value
-        props.addPost(text)
+        props.addPost()
     }
-    
+
+    // Вызывается при изменение в textarea с помощью onChange
+    let onPostChange = () => {
+        let text = newPostElement.current.value
+        props.updateNewPostText(text)
+    }
 
     return (
         <div className={s.postsBlock}>
             <h3>My post</h3>
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement} value={props.newPostText} />
                 </div>
                 <div>
-                    <button onClick={ addPost }>Add post</button>
+                    <button onClick={addPost}>Add post</button>
                 </div>
             </div>
             <div className={s.posts}>

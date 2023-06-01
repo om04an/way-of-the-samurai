@@ -25,8 +25,8 @@ const App = (props) => {
 
             {/* Route отслеживает изменения в адресной строке и как только адрес в адресной строке совпадает с путём в path, 
                 Route вызывает компоненту которая лежит в element */}
-            <Route path='/messages/*' element={<Messages state={props.state.messagesPage} />} />
-            <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost}/>} />
+            <Route path='/messages/*' element={<Messages state={props.state.messagesPage} addMessage={props.addMessage} updateNewMessageText={props.updateNewMessageText}/>} />
+            <Route path='/profile' element={<Profile state={props.state.profilePage} addPost={props.addPost} updateNewPostText={props.updateNewPostText} />} />
             <Route path='/news' element={<News />} />
             <Route path='/music' element={<Music />} />
             <Route path='/settings' element={<Settings />} />
